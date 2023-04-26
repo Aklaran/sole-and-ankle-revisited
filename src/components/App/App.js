@@ -25,7 +25,7 @@ const Main = styled.main`
     padding-block-start: 48px;
   }
 
-  @media ${MEDIA_QUERIES.tabletAndDown} {
+  @media ${MEDIA_QUERIES.phoneAndDown} {
     padding-inline: 16px;
   }
 `;
