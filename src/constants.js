@@ -17,14 +17,14 @@ export const WEIGHTS = {
   bold: 800,
 };
 
-export const BREAKPOINTS_REM = {
-  tabletMin: 37.5,
-  laptopMin: 59.375,
-  desktopMin: 81.25,
+export const BREAKPOINTS_PX = {
+  phoneMax: 600,
+  tabletMax: 950,
+  laptopMax: 1300,
 };
 
 export const MEDIA_QUERIES = {
-  phoneAndDown: `(max_width: ${BREAKPOINTS_REM.tabletMin}rem)`,
-  tabletAndDown: `(max_width: ${BREAKPOINTS_REM.laptopMin}rem)`,
-  laptopAndDown: `(max_width: ${BREAKPOINTS_REM.desktopMin}rem)`,
+  phoneAndDown: `(max-width: ${BREAKPOINTS_PX.phoneMax / 16}rem)`,
+  tabletAndDown: `(max-width: ${BREAKPOINTS_PX.tabletMax / 16}rem)`,
+  laptopAndDown: `(max-width: ${BREAKPOINTS_PX.laptopMax / 16}rem)`,
 };
