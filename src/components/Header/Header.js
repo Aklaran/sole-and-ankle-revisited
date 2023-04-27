@@ -25,12 +25,12 @@ const Header = () => {
           <Logo />
         </Side>
         <Nav>
-          <NavLink href="/sale">Sale</NavLink>
+          <NavLink href="/sale">Longer Sale</NavLink>
           <NavLink href="/new">New&nbsp;Releases</NavLink>
           <NavLink href="/men">Men</NavLink>
           <NavLink href="/women">Women</NavLink>
-          <NavLink href="/kids">Kids</NavLink>
-          <NavLink href="/collections">Collections</NavLink>
+          <NavLink href="/kids">Longer Kids</NavLink>
+          <NavLink href="/collections">Longer Collections</NavLink>
 
           <MobileNavButton>
             <Icon id="shopping-bag" color={COLORS.gray[900]} />
@@ -60,8 +60,8 @@ const MainHeader = styled.div`
   display: flex;
   align-items: baseline;
   padding: 18px 32px;
-  height: 72px;
   border-bottom: 1px solid ${COLORS.gray[300]};
+  overflow: auto;
 
   @media ${MEDIA_QUERIES.tabletAndDown} {
     justify-content: space-between;
@@ -81,7 +81,7 @@ const MainHeader = styled.div`
 
 const Nav = styled.nav`
   display: flex;
-  gap: 48px;
+  gap: clamp(1rem, 6vw - 2.5rem, 3rem);
   margin: 0px 48px;
 
   @media ${MEDIA_QUERIES.tabletAndDown} {
@@ -114,6 +114,7 @@ const NavLink = styled.a`
   text-decoration: none;
   color: ${COLORS.gray[900]};
   font-weight: ${WEIGHTS.medium};
+  min-width: max-content;
 
   &:first-of-type {
     color: ${COLORS.secondary};
