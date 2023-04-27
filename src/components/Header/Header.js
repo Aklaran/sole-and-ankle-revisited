@@ -7,6 +7,7 @@ import SuperHeader from "../SuperHeader";
 import MobileMenu from "../MobileMenu";
 import Icon from "../Icon";
 import VisuallyHidden from "../VisuallyHidden/VisuallyHidden";
+import UnstyledButton from "../UnstyledButton/UnstyledButton";
 
 const Header = () => {
   const [showMobileMenu, setShowMobileMenu] = React.useState(false);
@@ -39,7 +40,7 @@ const Header = () => {
             <Icon id="search" color={COLORS.gray[900]} />
             <VisuallyHidden>Search</VisuallyHidden>
           </MobileNavButton>
-          <MobileNavButton>
+          <MobileNavButton onClick={() => setShowMobileMenu(true)}>
             <Icon id="menu" color={COLORS.gray[900]} />
             <VisuallyHidden>Open Menu</VisuallyHidden>
           </MobileNavButton>
@@ -123,7 +124,7 @@ const NavLink = styled.a`
   }
 `;
 
-const MobileNavButton = styled.button`
+const MobileNavButton = styled(UnstyledButton)`
   background-color: transparent;
   border: none;
   padding-inline: 4px;
